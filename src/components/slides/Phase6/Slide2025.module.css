@@ -1,0 +1,108 @@
+.slide2025 {
+    background: white;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    color: var(--primary-dark);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.card {
+    background: var(--background-alt);
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.iconGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.dataBadges {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.badge {
+    background: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    border: 1px solid #E0E0E0;
+}
+
+.omniFlow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.flowLine {
+    height: 2px;
+    background: var(--primary);
+    width: 50px;
+    /* Base width */
+}
+
+.integration {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.xeroText {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #13B5EA;
+    /* Xero Blue approx */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.successBanner {
+    margin-top: 4rem;
+    background: var(--accent-success);
+    color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}

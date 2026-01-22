@@ -1,0 +1,73 @@
+.slide13 {
+    background: #F0F8FF;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    color: var(--primary-dark);
+}
+
+.feedbackContainer {
+    position: relative;
+    width: 600px;
+    height: 300px;
+}
+
+.card {
+    position: absolute;
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 20px 20px 20px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    max-width: 300px;
+}
+
+.icon {
+    min-width: 32px;
+}
+
+.left {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.right {
+    top: 50px;
+    right: 0;
+    border-radius: 20px 20px 0 20px;
+    z-index: 2;
+}
+
+.center {
+    bottom: 0;
+    left: 30%;
+    z-index: 3;
+    border-radius: 20px 20px 20px 20px;
+    background: var(--primary);
+    color: white;
+}
+
+.center .icon {
+    color: white !important;
+}
+
+.callout {
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    padding: 1rem 2rem;
+    border: 3px dashed var(--primary);
+    border-radius: 50px;
+}

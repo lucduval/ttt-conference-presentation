@@ -1,0 +1,242 @@
+.slideContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem 3rem;
+    height: 100%;
+    width: 100%;
+    gap: 1.5rem;
+    overflow: hidden;
+}
+
+.topHeader {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0077BB;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+}
+
+.contentRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 3rem;
+    flex: 1;
+}
+
+/* Left Side: Text */
+.textSide {
+    flex: 0 0 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.bulletItem {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.bulletIcon {
+    color: #4ECDC4;
+    padding-top: 3px;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+}
+
+.bulletContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bulletTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.bulletDesc {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Right Side: Visuals */
+.visualSide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    justify-content: center;
+}
+
+/* Three Cards Row - Now horizontal */
+.cardsRow {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.metricCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    flex: 1;
+    min-width: 140px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.iconWrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+}
+
+.label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .slideContainer {
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+
+    .topHeader {
+        font-size: 1.75rem;
+        margin-top: 0.5rem;
+    }
+
+    .contentRow {
+        gap: 2rem;
+    }
+
+    .textSide {
+        flex: 0 0 320px;
+        gap: 2rem;
+    }
+
+    .bulletTitle {
+        font-size: 1.25rem;
+    }
+
+    .bulletDesc {
+        font-size: 1rem;
+    }
+
+    .metricCard {
+        padding: 1.25rem 1rem;
+        min-width: 120px;
+    }
+
+    .value {
+        font-size: 1.75rem;
+    }
+
+    .iconWrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .label {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .contentRow {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .textSide {
+        flex: 0 0 auto;
+        gap: 1.5rem;
+    }
+
+    .cardsRow {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .metricCard {
+        min-width: 100px;
+        max-width: 160px;
+    }
+
+    .bulletIcon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .slideContainer {
+        padding: 1rem;
+    }
+
+    .topHeader {
+        font-size: 1.5rem;
+    }
+
+    .bulletTitle {
+        font-size: 1.1rem;
+    }
+
+    .bulletDesc {
+        font-size: 0.9rem;
+    }
+
+    .metricCard {
+        padding: 1rem 0.75rem;
+    }
+
+    .value {
+        font-size: 1.5rem;
+    }
+
+    .iconWrapper {
+        width: 36px;
+        height: 36px;
+    }
+}

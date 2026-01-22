@@ -1,0 +1,110 @@
+.slide12 {
+    background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+    color: white;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+.past {
+    text-align: center;
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+.dimIcon {
+    color: #8899A6;
+    margin-bottom: 1rem;
+}
+
+.past h2 {
+    font-size: 2rem;
+    color: #8899A6;
+}
+
+.past p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #8899A6;
+}
+
+.arrow {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+}
+
+.future {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crystalBall {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), rgba(0, 200, 255, 0.4));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 60px rgba(0, 200, 255, 0.4);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.bulb {
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.5));
+}
+
+.future h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #fff, #00C8FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.future p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.tagline {
+    position: absolute;
+    bottom: 10%;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.1);
+}

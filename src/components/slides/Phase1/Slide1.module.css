@@ -1,0 +1,63 @@
+.slide1 {
+    background: linear-gradient(135deg, var(--background) 0%, var(--primary-light) 100%);
+}
+
+.content {
+    text-align: center;
+    z-index: 10;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.bridgeGraphic {
+    margin-top: 4rem;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bridgeLine {
+    width: 60%;
+    height: 2px;
+    background: var(--primary);
+    position: relative;
+}
+
+.bridgeLine::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) scale(3);
+        opacity: 0;
+    }
+}

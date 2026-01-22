@@ -1,0 +1,117 @@
+.slideAgenda {
+    background: linear-gradient(135deg, var(--background) 0%, var(--primary-light) 100%);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1400px;
+    gap: 4rem;
+}
+
+/* Left Heading Section */
+.headingSection {
+    flex: 0 0 auto;
+    text-align: left;
+    padding-right: 3rem;
+}
+
+.title {
+    font-size: 5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+/* Right Timeline Section */
+.timelineSection {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.timelineLine {
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%);
+    transform-origin: top;
+    border-radius: 3px;
+}
+
+.itemsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.agendaItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 119, 187, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.agendaItem:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 20px rgba(0, 119, 187, 0.12);
+}
+
+.itemDot {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 3px solid;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.itemContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.itemNumber {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.05em;
+}
+
+.itemTitle {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.itemDescription {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+}

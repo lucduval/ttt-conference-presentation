@@ -1,0 +1,241 @@
+.slideContainer {
+    display: flex;
+    flex-direction: column;
+    /* Changed to column to stack header and content */
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 4rem;
+    /* Reduced padding */
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+    /* Gap between header and content */
+}
+
+.topHeader {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0077BB;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contentRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* Center the content */
+    width: 100%;
+    gap: 4rem;
+    /* Reduced gap from original generous spacing */
+    flex: 1;
+}
+
+/* Left Side: Text Content */
+.textContent {
+    flex: 0 1 500px;
+    /* Limit width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-dark);
+}
+
+.textContent h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    /* Increased space below heading */
+    background: linear-gradient(135deg, #0077BB 0%, #4ECDC4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.bulletList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bulletItem {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    /* Increased vertical space */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    opacity: 0.9;
+}
+
+.bulletIcon {
+    color: #25D366;
+    /* WhatsApp Greenish */
+    min-width: 32px;
+}
+
+/* Right Side: Phone Mockup */
+.phoneWrapper {
+    flex: 0 0 380px;
+    /* Slightly smaller or fixed width */
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.phoneFrame {
+    width: 340px;
+    height: 680px;
+    border: 12px solid #333;
+    border-radius: 40px;
+    background: #f0f2f5;
+    /* WhatsApp bg color */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Phone Header */
+.phoneHeader {
+    background: #008069;
+    /* WhatsApp Teal */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactName {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Phone Body / Chat Area */
+.chatArea {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: #E5DDD5;
+    /* Removed external image dependency for background pattern to avoid load issues, simple color is fine or we can add a subtle CSS pattern if needed */
+    overflow: hidden;
+}
+
+.messageBubble {
+    max-width: 85%;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.agentMessage {
+    background: white;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+}
+
+.clientMessage {
+    background: #d9fdd3;
+    /* WhatsApp User Message Green */
+    align-self: flex-end;
+    border-top-right-radius: 0;
+}
+
+.pdfAttachment {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.timestamp {
+    font-size: 0.65rem;
+    color: #999;
+    align-self: flex-end;
+    margin-top: 0.3rem;
+    display: block;
+    text-align: right;
+}
+
+@media (max-width: 1440px) {
+    .slideContainer {
+        padding: 1rem 2rem;
+        gap: 1.5rem;
+    }
+
+    .topHeader {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contentRow {
+        gap: 2rem;
+    }
+
+    .textContent {
+        flex: 0 1 400px;
+    }
+
+    .textContent h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .bulletItem {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .phoneWrapper {
+        flex: 0 0 320px;
+        height: 600px;
+    }
+
+    .phoneFrame {
+        width: 300px;
+        height: 580px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .textContent h1 {
+        font-size: 2rem;
+    }
+
+    .phoneWrapper {
+        flex: 0 0 280px;
+        height: 550px;
+    }
+
+    .phoneFrame {
+        width: 260px;
+        height: 530px;
+    }
+}
