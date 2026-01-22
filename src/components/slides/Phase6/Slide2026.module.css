@@ -14,16 +14,16 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
     width: 95%;
     max-width: 1400px;
 }
 
 .levelCard {
     background: white;
-    padding: 2rem 1rem;
-    border-radius: 20px;
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,20 +33,20 @@
 }
 
 .iconCircle {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .levelCard h3 {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    height: 3rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    height: 2.75rem;
     /* Fixed height for alignment */
     display: flex;
     align-items: center;

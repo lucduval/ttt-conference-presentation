@@ -82,57 +82,65 @@
     justify-content: center;
 }
 
-/* Three Cards Row - Now horizontal */
+/* Three Cards - Vertical Stack */
 .cardsRow {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 1.25rem;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    max-width: 400px;
 }
 
 .metricCard {
     background: white;
-    border-radius: 12px;
-    padding: 1.5rem 1.25rem;
-    flex: 1;
-    min-width: 140px;
-    max-width: 200px;
+    border-radius: 16px;
+    padding: 3.1rem 2rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    gap: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
 }
 
 .iconWrapper {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.75rem;
-    font-size: 1.25rem;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+}
+
+.metricContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 0;
 }
 
 .value {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 800;
     color: #111827;
-    line-height: 1;
+    line-height: 1.2;
     margin-bottom: 0.25rem;
     white-space: nowrap;
 }
 
 .label {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: #6b7280;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Responsive Breakpoints */
@@ -152,8 +160,8 @@
     }
 
     .textSide {
-        flex: 0 0 320px;
-        gap: 2rem;
+        flex: 0 0 300px;
+        gap: 1.75rem;
     }
 
     .bulletTitle {
@@ -164,22 +172,27 @@
         font-size: 1rem;
     }
 
+    .cardsRow {
+        max-width: 350px;
+        gap: 1rem;
+    }
+
     .metricCard {
-        padding: 1.25rem 1rem;
-        min-width: 120px;
+        padding: 1.25rem 1.5rem;
+        gap: 1.25rem;
     }
 
     .value {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 
     .iconWrapper {
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
     }
 
     .label {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -187,21 +200,28 @@
     .contentRow {
         flex-direction: column;
         gap: 1.5rem;
+        align-items: center;
     }
 
     .textSide {
         flex: 0 0 auto;
         gap: 1.5rem;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .visualSide {
+        align-items: center;
+        max-width: 500px;
     }
 
     .cardsRow {
+        max-width: 100%;
         width: 100%;
-        justify-content: center;
     }
 
     .metricCard {
-        min-width: 100px;
-        max-width: 160px;
+        max-width: none;
     }
 
     .bulletIcon {
@@ -228,15 +248,20 @@
     }
 
     .metricCard {
-        padding: 1rem 0.75rem;
+        padding: 1rem 1.25rem;
+        gap: 1rem;
     }
 
     .value {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .iconWrapper {
-        width: 36px;
-        height: 36px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .label {
+        font-size: 0.75rem;
     }
 }

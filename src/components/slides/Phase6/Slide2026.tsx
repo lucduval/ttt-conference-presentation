@@ -2,7 +2,7 @@
 
 import Slide from "../../deck/Slide";
 import { motion } from "framer-motion";
-import { Rocket, Wand2, Calculator, TrendingUp, Lock } from "lucide-react";
+import { Rocket, Wand2, Calculator, TrendingUp, Lock, FileText } from "lucide-react";
 import styles from "./Slide2026.module.css";
 
 export default function Slide2026() {
@@ -11,6 +11,7 @@ export default function Slide2026() {
         { name: "Invoicing 2.0", icon: Wand2, color: "#9D50BB" },
         { name: "Accounting Tools 2.0", icon: Calculator, color: "#45B7D1" },
         { name: "Financial Advisory", icon: TrendingUp, color: "#4ECDC4" },
+        { name: "Bank Statement Tool 2.0", icon: FileText, color: "#36D7B7" },
     ];
 
     return (
@@ -31,7 +32,7 @@ export default function Slide2026() {
                         whileHover={{ y: -10 }}
                     >
                         <div className={styles.iconCircle} style={{ background: level.color }}>
-                            <level.icon size={32} color="white" />
+                            <level.icon size={28} color="white" />
                         </div>
                         <h3>{level.name}</h3>
                         <div className={styles.unlockBar}>

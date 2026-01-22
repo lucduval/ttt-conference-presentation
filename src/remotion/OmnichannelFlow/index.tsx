@@ -167,7 +167,7 @@ const LaptopView = () => {
     return (
         <div style={{ width: 900, height: 600, display: 'flex', flexDirection: 'column' }}>
             {/* Laptop Frame */}
-            <div style={{ flex: 1, backgroundColor: '#1a1a1a', borderRadius: '12px 12px 0 0', border: '1px solid #333', display: 'flex', flexDirection: 'column', padding: '12px 12px 0 12px', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }}>
+            <div style={{ flex: 1, backgroundColor: '#1a1a1a', borderRadius: '12px 12px 0 0', border: '1px solid #333', display: 'flex', flexDirection: 'column', padding: '12px 12px 0 12px', boxShadow: '0 20px 60px rgba(0,0,0,0.4)', overflow: 'hidden' }}>
                 {/* Screen */}
                 <div style={{ flex: 1, backgroundColor: '#f3f4f6', borderRadius: '4px 4px 0 0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
 
@@ -239,7 +239,7 @@ const LaptopView = () => {
                             </div>
 
                             {/* Reply Box */}
-                            <div style={{ padding: 20, backgroundColor: 'white', borderTop: '1px solid #e5e7eb' }}>
+                            <div style={{ padding: 15, backgroundColor: 'white', borderTop: '1px solid #e5e7eb' }}>
                                 <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, overflow: 'hidden' }}>
                                     {/* AI Suggestion Header */}
                                     {frame > startAi && !sentReply && (
@@ -252,7 +252,7 @@ const LaptopView = () => {
                                     )}
 
                                     {/* Text Area */}
-                                    <div style={{ padding: 12, minHeight: 60, fontSize: 14, color: '#374151' }}>
+                                    <div style={{ padding: 10, minHeight: 50, fontSize: 14, color: '#374151' }}>
                                         {!sentReply ? currentAiText : ""}
                                         {frame > startAi && !sentReply && frame < endAi && <span style={{ borderRight: '2px solid black' }}></span>}
                                     </div>

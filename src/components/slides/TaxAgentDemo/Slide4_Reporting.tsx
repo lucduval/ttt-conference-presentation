@@ -43,7 +43,7 @@ export default function Slide4_Reporting() {
                         <BarChart3 size={32} className={styles.bulletIcon} />
                         <div className={styles.bulletContent}>
                             <div className={styles.bulletTitle}>Measurable Impact</div>
-                            <div className={styles.bulletDesc}>Real-time tracking of efficiency gains and process velocity.</div>
+                            <div className={styles.bulletDesc}>Real-time tracking of efficiency gains</div>
                         </div>
                     </motion.div>
 
@@ -56,7 +56,7 @@ export default function Slide4_Reporting() {
                         <LineChart size={32} className={styles.bulletIcon} />
                         <div className={styles.bulletContent}>
                             <div className={styles.bulletTitle}>Business Value</div>
-                            <div className={styles.bulletDesc}>Direct correlation between automation and revenue growth.</div>
+                            <div className={styles.bulletDesc}>Correlation between automation and revenue growth</div>
                         </div>
                     </motion.div>
                 </div>
@@ -68,49 +68,55 @@ export default function Slide4_Reporting() {
                         {/* Metric 1 */}
                         <motion.div
                             className={styles.metricCard}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.0 }}
                         >
                             <div className={styles.iconWrapper} style={{ background: "#e0f2fe", color: "#0284c7" }}>
-                                <FileCheck size={24} />
+                                <FileCheck size={28} />
                             </div>
-                            <div className={styles.value}>
-                                <AnimatedCounter value={1240} />
+                            <div className={styles.metricContent}>
+                                <div className={styles.value}>
+                                    <AnimatedCounter value={1240} />
+                                </div>
+                                <div className={styles.label}>Documents Processed</div>
                             </div>
-                            <div className={styles.label}>Documents Processed</div>
                         </motion.div>
 
                         {/* Metric 2 */}
                         <motion.div
                             className={styles.metricCard}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.2 }}
                         >
                             <div className={styles.iconWrapper} style={{ background: "#fef3c7", color: "#d97706" }}>
-                                <Clock size={24} />
+                                <Clock size={28} />
                             </div>
-                            <div className={styles.value}>
-                                <AnimatedCounter value={350} /> hrs
+                            <div className={styles.metricContent}>
+                                <div className={styles.value}>
+                                    <AnimatedCounter value={350} /> hrs
+                                </div>
+                                <div className={styles.label}>Time Saved</div>
                             </div>
-                            <div className={styles.label}>Time Saved</div>
                         </motion.div>
 
                         {/* Metric 3 */}
                         <motion.div
                             className={styles.metricCard}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.4 }}
                         >
                             <div className={styles.iconWrapper} style={{ background: "#dcfce7", color: "#16a34a" }}>
-                                <TrendingUp size={24} />
+                                <TrendingUp size={28} />
                             </div>
-                            <div className={styles.value}>
-                                <AnimatedCounter value={45} />
+                            <div className={styles.metricContent}>
+                                <div className={styles.value}>
+                                    <AnimatedCounter value={45} />
+                                </div>
+                                <div className={styles.label}>Opportunities Created</div>
                             </div>
-                            <div className={styles.label}>Opportunities Created</div>
                         </motion.div>
                     </div>
 

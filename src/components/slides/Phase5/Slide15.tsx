@@ -28,7 +28,7 @@ export default function Slide15() {
                     transition={{ delay: 0.5 }}
                     className={styles.title}
                 >
-                    The Future is Here.
+                    The Future is Here
                 </motion.h1>
 
                 <motion.button
