@@ -2,16 +2,17 @@
 
 import Slide from "../../deck/Slide";
 import { motion } from "framer-motion";
-import { Rocket, Wand2, Calculator, TrendingUp, Lock, FileText } from "lucide-react";
+import { Rocket, Wand2, Calculator, TrendingUp, Lock, FileText, Bot } from "lucide-react";
 import styles from "./Slide2026.module.css";
 
 export default function Slide2026() {
     const levels = [
-        { name: "AI Tax Submissions", icon: Rocket, color: "#FF6B6B" },
-        { name: "Invoicing 2.0", icon: Wand2, color: "#9D50BB" },
-        { name: "Accounting Tools 2.0", icon: Calculator, color: "#45B7D1" },
-        { name: "Financial Advisory", icon: TrendingUp, color: "#4ECDC4" },
-        { name: "Bank Statement Tool 2.0", icon: FileText, color: "#36D7B7" },
+        { name: "AI Tax Submissions", icon: Rocket, color: "#FF6B6B", percentage: 80 },
+        { name: "Smarter Invoicing", icon: Wand2, color: "#9D50BB", percentage: 70 },
+        { name: "Accounting Tools 2.0", icon: Calculator, color: "#45B7D1", percentage: 80 },
+        { name: "Financial Advisory", icon: TrendingUp, color: "#4ECDC4", percentage: 50 },
+        { name: "Bank Statement Tool 2.0", icon: FileText, color: "#36D7B7", percentage: 85 },
+        { name: "Autonomous Agents", icon: Bot, color: "#2D3748", percentage: 0, status: "COMING SOON" },
     ];
 
     return (
@@ -29,21 +30,34 @@ export default function Slide2026() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + (i * 0.15) }}
-                        whileHover={{ y: -10 }}
                     >
                         <div className={styles.iconCircle} style={{ background: level.color }}>
-                            <level.icon size={28} color="white" />
+                            <level.icon size={32} color="white" />
                         </div>
                         <h3>{level.name}</h3>
-                        <div className={styles.unlockBar}>
-                            <motion.div
-                                className={styles.fill}
-                                initial={{ width: "0%" }}
-                                animate={{ width: "100%" }}
-                                transition={{ delay: 1 + (i * 0.3), duration: 1.5 }}
-                            />
+
+                        <div className={styles.impactBar}>
+                            <div className={styles.barLabel}>
+                                <span>Readiness</span>
+                                <span>{level.percentage}%</span>
+                            </div>
+                            <div className={styles.barTrack}>
+                                <motion.div
+                                    className={styles.barFill}
+                                    initial={{ width: "0%" }}
+                                    animate={{ width: `${level.percentage}%` }}
+                                    transition={{ delay: 1 + (i * 0.2), duration: 1.5, ease: "easeOut" }}
+                                />
+                            </div>
                         </div>
-                        <div className={styles.status}>COMING SOON</div>
+
+                        <div className={styles.statusContainer}>
+                            <div
+                                className={styles.statusDot}
+                                style={{ background: level.status === "COMING SOON" ? "#CBD5E0" : undefined }}
+                            />
+                            <span className={styles.statusText}>{level.status || "IN DEVELOPMENT"}</span>
+                        </div>
                     </motion.div>
                 ))}
             </div>

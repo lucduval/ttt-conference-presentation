@@ -2,44 +2,44 @@
 
 import Slide from "../../deck/Slide";
 import { motion } from "framer-motion";
-import { CheckCircle, Rocket, Bot, MessageCircle, Target } from "lucide-react";
+import { CheckCircle, Rocket, Sparkles, ArrowRightCircle, HelpCircle } from "lucide-react";
 import styles from "./Slide_Agenda.module.css";
 
 const agendaItems = [
     {
         number: 1,
         title: "2025: Foundation Built",
-        description: "Key achievements this year",
+        description: "Key achievements last year",
         icon: CheckCircle,
         color: "#10B981",
     },
     {
         number: 2,
-        title: "2026: The Vision",
-        description: "What's coming next",
+        title: "2025: Innovation Delivered",
+        description: "Admin Hub, CoPilot & Automation",
+        icon: Sparkles,
+        color: "#0078D4",
+    },
+    {
+        number: 3,
+        title: "2026: The Unlock",
+        description: "The future of TTT",
         icon: Rocket,
         color: "#F59E0B",
     },
     {
-        number: 3,
-        title: "AI Tax Agent Demo",
-        description: "Live demonstration",
-        icon: Bot,
-        color: "#4ECDC4",
-    },
-    {
         number: 4,
-        title: "Omnichannel Experience",
-        description: "Unified communication",
-        icon: MessageCircle,
-        color: "#25D366",
+        title: "The Way Forward",
+        description: "Strategic next steps",
+        icon: ArrowRightCircle,
+        color: "#0077BB",
     },
     {
         number: 5,
-        title: "Closing & Next Steps",
-        description: "Action items",
-        icon: Target,
-        color: "#0077BB",
+        title: "Closing & Questions",
+        description: "Wrap up",
+        icon: HelpCircle,
+        color: "#6b7280",
     },
 ];
 

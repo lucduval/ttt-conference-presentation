@@ -11,26 +11,35 @@ import Slide_Agenda from "../slides/Phase1/Slide_Agenda";
 import Slide1_ClientInteraction from "../slides/TaxAgentDemo/Slide1_ClientInteraction";
 import Slide2_ProcessFlow from "../slides/TaxAgentDemo/Slide2_ProcessFlow";
 import Slide3_CRMView from "../slides/TaxAgentDemo/Slide3_CRMView";
-import Slide4_Reporting from "../slides/TaxAgentDemo/Slide4_Reporting";
+
 
 import Slide9 from "../slides/Phase3/Slide9";
+import SlideTechAmplification from "../slides/Phase5/SlideTechAmplification";
+import SlideTechTrends from "../slides/Phase5/SlideTechTrends";
 import Slide13 from "../slides/Phase5/Slide13";
 import Slide15 from "../slides/Phase5/Slide15";
 import Slide2025 from "../slides/Phase6/Slide2025";
 import Slide_OmniDemo from "../slides/Phase6/Slide_OmniDemo";
 import Slide2026 from "../slides/Phase6/Slide2026";
+import SlideBankStatement from "../slides/Phase6/Slide_BankStatement";
+import SlideCoPilot from "../slides/Phase6/Slide_CoPilot";
+import SlideAdminHub from "../slides/Phase6/Slide_AdminHub";
 
 const SLIDES = [
     Slide1,
     Slide_Agenda,
     Slide2025,
+    SlideAdminHub,
+    SlideCoPilot,
+    Slide_OmniDemo,
     Slide2026,
     Slide1_ClientInteraction,
     Slide3_CRMView,
     Slide2_ProcessFlow,
-    Slide4_Reporting,
-    Slide_OmniDemo,
-    //Slide9,
+
+    SlideBankStatement,
+    SlideTechAmplification,
+    SlideTechTrends,
     Slide13,
     Slide15,
 ];

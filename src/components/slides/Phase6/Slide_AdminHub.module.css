@@ -1,0 +1,206 @@
+.container {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    gap: 0;
+    position: relative;
+    background: #F9FAFB;
+    overflow: hidden;
+}
+
+.leftPane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    z-index: 1;
+    height: 100%;
+}
+
+.rightPane {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    background: white;
+    z-index: 2;
+    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.02);
+    height: 100%;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--primary) 0%, #4ECDC4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.statList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statValue {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    /* Assuming var(--primary) exists, otherwise fallback to color needed */
+    color: #0078D4;
+    /* Fallback/Override */
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Laptop Mockup */
+.laptopFrame {
+    width: 140%;
+    max-width: none;
+    aspect-ratio: 16/10;
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow:
+        0 30px 60px -12px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 10%;
+    transform-style: preserve-3d;
+    transform: perspective(2000px) rotateY(10deg) translateX(-10%);
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background: #F3F4F6;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dynamics UI Simplified */
+.topBar {
+    height: 48px;
+    background: #0078D4;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.waffle,
+.dynamicsTitle {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.mainLayout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.navRail {
+    width: 220px;
+    background: #EBEBEB;
+    border-right: 1px solid #d1d1d1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.navItem {
+    height: 16px;
+    background: #D4D4D4;
+    border-radius: 6px;
+    width: 80%;
+}
+
+.navItem.active {
+    background: #0078D4;
+    width: 90%;
+}
+
+.contentArea {
+    flex: 1;
+    padding: 24px;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Task List Styles */
+.viewHeader {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.taskTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableHeader {
+    border-bottom: 1px solid #E1DFDD;
+}
+
+.tableHeader th {
+    text-align: left;
+    padding: 12px 16px;
+    color: #666;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.taskRow {
+    border-bottom: 1px solid #F3F2F1;
+}
+
+.taskRow td {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.statusPill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    min-width: 100px;
+    justify-content: center;
+}

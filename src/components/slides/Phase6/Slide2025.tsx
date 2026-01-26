@@ -2,7 +2,7 @@
 
 import Slide from "../../deck/Slide";
 import { motion } from "framer-motion";
-import { Bot, Mail, MessageCircle, User, Link, Database, ClipboardList } from "lucide-react";
+import { Bot, Mail, MessageCircle, User, Link, Database, ClipboardList, Layers, ArrowRightLeft } from "lucide-react";
 import Image from "next/image";
 import styles from "./Slide2025.module.css";
 
@@ -10,8 +10,8 @@ export default function Slide2025() {
     return (
         <Slide className={styles.slide2025}>
             <motion.div className={styles.header}>
-                <h1>2025: Foundation Built.</h1>
-                <p>A year of massive technical leaps.</p>
+                <h1>2025: Foundation Built</h1>
+                <p>A year of massive technical leaps</p>
             </motion.div>
 
             <div className={styles.grid}>
@@ -74,7 +74,7 @@ export default function Slide2025() {
                         </motion.div>
                         <span className={styles.xeroText}>Xero</span>
                     </div>
-                    <h3>Integration</h3>
+                    <h3>Xero Integration</h3>
                     <p>Seamless sync with Xero</p>
                 </motion.div>
 
@@ -89,18 +89,39 @@ export default function Slide2025() {
                         <ClipboardList size={48} color="#FF9F1C" />
                     </div>
                     <h3>Admin Hub</h3>
-                    <p>efficiency task manager</p>
+                    <p>Efficiency task manager</p>
+                </motion.div>
+
+                {/* Feature 5: Unified CRM */}
+                <motion.div
+                    className={styles.card}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.0 }}
+                >
+                    <div className={styles.iconGroup}>
+                        <Layers size={48} color="#7C3AED" />
+                    </div>
+                    <h3>Unified CRM</h3>
+                    <p>All departments in one system</p>
+                </motion.div>
+
+                {/* Feature 6: Cross-Selling */}
+                <motion.div
+                    className={styles.card}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.2 }}
+                >
+                    <div className={styles.iconGroup}>
+                        <ArrowRightLeft size={48} color="#EC4899" />
+                    </div>
+                    <h3>Cross-Selling</h3>
+                    <p>Leverage client data across departments</p>
                 </motion.div>
             </div>
 
-            <motion.div
-                className={styles.successBanner}
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 1.2 }}
-            >
-                ✓ 100% COMPLETE
-            </motion.div>
+
         </Slide>
     );
 }

@@ -10,7 +10,7 @@ export default function Slide2_ProcessFlow() {
         { id: 1, label: "Received", icon: FileText, color: "#9ca3af" },
         { id: 2, label: "Decrypting", icon: LockOpen, color: "#f87171" },
         { id: 3, label: "Extracting", icon: Scan, color: "#fbbf24" },
-        { id: 4, label: "Categorizing", icon: FolderOpen, color: "#60a5fa" },
+        { id: 4, label: "Categorising", icon: FolderOpen, color: "#60a5fa" },
         { id: 5, label: "CRM Entry", icon: Database, color: "#34d399" },
     ];
 
@@ -32,7 +32,7 @@ export default function Slide2_ProcessFlow() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
             >
-                From raw file to structured data in seconds.
+                From raw file to structured data in seconds
             </motion.div>
 
             <div className={styles.flowContainer}>

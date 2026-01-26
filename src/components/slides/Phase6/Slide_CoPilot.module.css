@@ -1,0 +1,296 @@
+.container {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    gap: 0;
+    position: relative;
+    background: #F9FAFB;
+    overflow: hidden;
+}
+
+.leftPane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    z-index: 1;
+    height: 100%;
+}
+
+.rightPane {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    background: white;
+    z-index: 2;
+    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.02);
+    height: 100%;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--primary) 0%, #4ECDC4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    text-align: left;
+    max-width: 90%;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.featureIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Laptop Mockup */
+.laptopFrame {
+    width: 140%;
+    max-width: none;
+    aspect-ratio: 16/10;
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow:
+        0 30px 60px -12px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 10%;
+    transform-style: preserve-3d;
+    transform: perspective(2000px) rotateY(10deg) translateX(-10%);
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background: #F3F4F6;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Dynamics UI Simplified */
+.topBar {
+    height: 48px;
+    background: #0078D4;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 16px;
+}
+
+.waffle,
+.dynamicsTitle {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.mainLayout {
+    display: flex;
+    height: calc(100% - 48px);
+}
+
+.navRail {
+    width: 240px;
+    background: #EBEBEB;
+    border-right: 1px solid #d1d1d1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.navItem {
+    height: 16px;
+    background: #D4D4D4;
+    border-radius: 6px;
+    width: 80%;
+}
+
+.navItem.active {
+    background: #0078D4;
+    width: 90%;
+}
+
+.contentArea {
+    flex: 1;
+    padding: 32px;
+    background: white;
+    position: relative;
+}
+
+.gridDummy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gridHeader {
+    height: 40px;
+    background: #F3F2F1;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.gridRow {
+    height: 32px;
+    background: #FAFAFA;
+    border-bottom: 1px solid #E1DFDD;
+}
+
+/* Copilot Trigger */
+.copilotTrigger {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 24px 0 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Copilot Panel */
+.copilotPanel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 35px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #E1DFDD;
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.copilotHeader {
+    padding: 20px;
+    border-bottom: 1px solid #E1DFDD;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.copilotBody {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+.userMessage {
+    background: #EBF8FF;
+    align-self: flex-end;
+    color: #2B6CB0;
+    border-bottom-right-radius: 0;
+}
+
+.aiMessage {
+    background: #F7FAFC;
+    align-self: flex-start;
+    border: 1px solid #E2E8F0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    white-space: pre-wrap;
+}
+
+.aiAvatar {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #0078D4, #00C7F4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.inputArea {
+    padding: 20px;
+    border-top: 1px solid #E1DFDD;
+    background: #FAFAFA;
+}
+
+.inputPlaceholder {
+    height: 44px;
+    background: white;
+    border: 1px solid #E1DFDD;
+    border-radius: 22px;
+    padding: 0 20px;
+    color: #999;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Cursor Animation */
+.cursor {
+    width: 24px;
+    height: 24px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black' stroke='white' stroke-width='2'%3E%3Cpath d='M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z'/%3E%3C/svg%3E") no-repeat center/contain;
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}

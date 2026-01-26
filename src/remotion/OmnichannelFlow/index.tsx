@@ -287,7 +287,15 @@ const LaptopView = () => {
 
 export const OmnichannelFlow: React.FC = () => {
     return (
-        <AbsoluteFill style={{ backgroundColor: '#f8fafc', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 50 }}>
+        <AbsoluteFill style={{
+            backgroundColor: '#f8fafc',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 50,
+            transform: 'scale(1.25)', // Increased size as requested
+            transformOrigin: 'center center'
+        }}>
             {/* Phone View */}
             <div style={{ zIndex: 10 }}>
                 <PhoneView />

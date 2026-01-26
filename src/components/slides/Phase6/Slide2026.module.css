@@ -1,74 +1,216 @@
 .slide2026 {
     background: #F9FAFB;
+    /* geometric background pattern */
+    background-image:
+        radial-gradient(at 0% 0%, rgba(var(--primary-rgb), 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(78, 205, 196, 0.1) 0px, transparent 50%);
 }
 
 .header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .header h1 {
-    font-size: 3.5rem;
-    color: var(--primary);
+    font-size: 4rem;
+    background: linear-gradient(135deg, var(--primary) 0%, #4ECDC4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.header p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
     width: 95%;
-    max-width: 1400px;
+    max-width: 1200px;
 }
 
 .levelCard {
     background: white;
-    padding: 1.5rem 1rem;
-    border-radius: 16px;
+    padding: 1.5rem;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 10px 15px -3px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.levelCard:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: rgba(var(--primary-rgb), 0.2);
+}
+
+/* Subtle glow effect on hover */
+.levelCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), #4ECDC4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.levelCard:hover::before {
+    opacity: 1;
 }
 
 .iconCircle {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.levelCard:hover .iconCircle {
+    transform: rotate(0deg) scale(1.1);
 }
 
 .levelCard h3 {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    height: 2.75rem;
-    /* Fixed height for alignment */
+    font-size: 1.5rem;
+    /* Increased font size */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text);
+    height: 3.5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    line-height: 1.2;
 }
 
-.unlockBar {
+.impactBar {
     width: 100%;
-    height: 8px;
-    background: #E0E0E0;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.fill {
-    height: 100%;
-    background: var(--primary);
-}
-
-.status {
-    font-size: 0.8rem;
-    font-weight: 700;
+.barLabel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: var(--text-muted);
-    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.barTrack {
+    height: 6px;
+    background: #F3F4F6;
+    border-radius: 99px;
+    overflow: hidden;
+    position: relative;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--primary), #4ECDC4);
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+}
+
+.statusContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #F3F4F6;
+    border-radius: 99px;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #F59E0B;
+    /* Amber for development */
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+    animation: pulse 2s infinite;
+}
+
+.statusText {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(245, 158, 11, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        width: 95%;
+        /* More width on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+        /* Add some bottom padding for scroll */
+    }
+
+    .levelCard {
+        padding: 1.5rem;
+    }
 }
