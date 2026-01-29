@@ -14,7 +14,7 @@ export default function Slide1() {
                 transition={{ delay: 0.2, duration: 0.8 }}
             >
                 <h2 className={styles.subtitle}>Our Technology Future: 2026 & Beyond</h2>
-                <h1 className={styles.title}>Uniting Tax, Insurance, Accounting, and Advisory</h1>
+                <h1 className={styles.title}>Super Agency</h1>
                 <div className={styles.bridgeGraphic}>
                     {/* Placeholder for Digital Bridge Visual */}
                     <div className={styles.bridgeLine}></div>
