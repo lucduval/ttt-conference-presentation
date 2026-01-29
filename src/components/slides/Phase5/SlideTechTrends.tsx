@@ -9,7 +9,7 @@ export default function SlideTechTrends() {
     return (
         <Slide className={styles.slideTrends}>
             <motion.div className={styles.header}>
-                <h1>Tech Trends 2026</h1>
+                <h1>TTT's Tech Trends</h1>
                 <p>The next wave of financial innovation</p>
             </motion.div>
 

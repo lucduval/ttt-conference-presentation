@@ -39,15 +39,15 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: 2rem;
+    padding-left: 6rem;
 }
 
 .timelineLine {
     position: absolute;
-    left: 2rem;
+    left: 2.5rem;
     top: 0;
     bottom: 0;
-    width: 3px;
+    width: 4px;
     background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%);
     transform-origin: top;
     border-radius: 3px;

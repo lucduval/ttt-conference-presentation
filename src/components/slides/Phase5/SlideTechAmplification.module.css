@@ -1,76 +1,69 @@
 .slideAmplification {
     background: white;
+    color: #333;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    padding-left: 15%;
+    /* Move text significantly to the right */
+    gap: 4rem;
+    align-items: center;
+}
+
+.leftColumn {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.rightColumn {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contentWrapper {
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    color: #1a1a2e;
+    /* Dark navy */
+    line-height: 1.2;
+}
+
+.pointsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 800px;
     gap: 2rem;
 }
 
-.iconContainer {
-    position: relative;
-    margin-bottom: 1rem;
+.pointsList li {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.spark {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-}
-
-.contentWrapper h1 {
-    font-size: 4rem;
-    color: var(--primary-dark);
-    margin: 0;
-    line-height: 1.1;
-}
-
-.missionBox {
-    background: var(--background-alt);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    /* Bolder for better readability on white */
+    color: #444;
 }
 
-.missionBox p {
-    font-size: 1.8rem;
-    color: var(--text-color);
-    margin: 0;
-    line-height: 1.4;
+.checkIcon {
+    color: #0077B6;
+    /* Stronger blue */
+    flex-shrink: 0;
 }
 
 .highlight {
-    color: var(--primary);
-    font-weight: 700;
-}
-
-.subtext {
-    font-size: 1.4rem !important;
-    /* Override the box p size */
-    color: var(--text-muted) !important;
-}
-
-.subtext strong {
-    color: var(--primary-dark);
-}
-
-.separator {
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    border-radius: 2px;
+    color: #4ECDC4;
+    font-weight: 600;
 }

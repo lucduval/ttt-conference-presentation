@@ -16,7 +16,6 @@ import Slide3_CRMView from "../slides/TaxAgentDemo/Slide3_CRMView";
 import Slide9 from "../slides/Phase3/Slide9";
 import SlideTechAmplification from "../slides/Phase5/SlideTechAmplification";
 import SlideTechTrends from "../slides/Phase5/SlideTechTrends";
-import Slide13 from "../slides/Phase5/Slide13";
 import Slide15 from "../slides/Phase5/Slide15";
 import Slide2025 from "../slides/Phase6/Slide2025";
 import Slide_OmniDemo from "../slides/Phase6/Slide_OmniDemo";
@@ -40,7 +39,6 @@ const SLIDES = [
     SlideBankStatement,
     SlideTechAmplification,
     SlideTechTrends,
-    Slide13,
     Slide15,
 ];
 
